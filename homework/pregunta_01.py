@@ -106,7 +106,7 @@ def pregunta_01():
         for file in glob.glob(f"{output_dir}/*"):
             os.remove(file)
 
-    os.makedirs(output_dir)
+    os.makedirs(output_dir, exist_ok=True)
 
     plt.savefig(f"{output_dir}/news.png")
     
